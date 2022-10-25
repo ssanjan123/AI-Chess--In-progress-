@@ -1,86 +1,5 @@
 import random
-
-
-
-
-
-
-    # def movePiece(self, piece, start, end):
-    #     if piece.color == "white":
-    #         if piece.name == "pawn":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False
-    #         elif piece.name == "rook":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False
-    #         elif piece.name == "knight":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False
-    #         elif piece.name == "bishop":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False
-    #         elif piece.name == "queen":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False
-    #         elif piece.name == "king":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False
-    #     elif piece.color == "black":
-    #         if piece.name == "pawn":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False
-    #         elif piece.name == "rook":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False
-    #         elif piece.name == "knight":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False
-    #         elif piece.name == "bishop":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False
-    #         elif piece.name == "queen":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False
-    #         elif piece.name == "king":
-    #             if piece.move(start, end, self.board):
-    #                 self.move(start, end)
-    #                 return True
-    #             else:
-    #                 return False            
-
+import time
 
 class chessPiece:
     def __init__(self, name, color):
@@ -271,10 +190,10 @@ class chessBoard():
         j = start[1]
         k = end[0]
         l = end[1]
-        print (i,j,k,l)
-        print()
-        print(self.board[i][j].name, self.board[i][j].color)
-        print(self.board[k][l].name, self.board[k][l].color)
+        # print (i,j,k,l)
+        # print()
+        # print(self.board[i][j].name, self.board[i][j].color)
+        # print(self.board[k][l].name, self.board[k][l].color)
         if self.board[i][j].color == self.board[k][l].color:
             return False
         if self.board[start[0]][start[1]].move(start, end) == True:
@@ -373,7 +292,9 @@ def main():
     # print(chessBoard1.pointsWhite())
     # print(chessBoard1.pointsBlack())
 
-main()
+if __name__ == '__main__':
+    main()
+
 
 
 
