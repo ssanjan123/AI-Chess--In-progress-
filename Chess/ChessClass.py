@@ -121,16 +121,16 @@ class pawn(chessPiece):
         super().__init__(name, color)
     def move(self, start, end):
         if self.color == 'white':
-            if start[0] == 1:
-                if end[0] == 3:
+            if start[0] == 1 and start[0] + 2 == end[0]:
+                if end[0] == 3 and start[1] == end[1]:
                     return True
             if start[0] + 1 == end[0] and start[1] == end[1]:
                 return True
         if self.color == 'black':
-            if start[0] == 6:
-                if end[0] == 4:
+            if start[0] == 6 and start[0] - 2 == end[0]:
+                if end[0] == 4 and start[1] == end[1]:
                     return True
-            if start[0] - 1 == end[0]:
+            if start[0] - 1 == end[0] and start[1] == end[1]:
                 return True
         return False
     def attack(self, start, end):
@@ -278,17 +278,19 @@ class chessBoard():
         if self.board[i][j].color == self.board[k][l].color:
             return False
         if self.board[start[0]][start[1]].move(start, end) == True:
-            self.board[end[0]][end[1]] = self.board[start[0]][start[1]]
-            self.board[start[0]][start[1]] = emptySpace()
+            if self.board[k][l].name == 'empty':
+                print(self.board[i][j].name, self.board[i][j].color, "moved to", (k,l))
+                self.board[end[0]][end[1]] = self.board[start[0]][start[1]]
+                self.board[start[0]][start[1]] = emptySpace()
         elif self.board[start[0]][start[1]].attack(start, end) == True:
+            print(self.board[i][j].name, self.board[i][j].color, "attacks", self.board[k][l].name, self.board[k][l].color)
             self.board[end[0]][end[1]] = self.board[start[0]][start[1]]
             self.board[start[0]][start[1]] = emptySpace
         elif self.board[start[0]][start[1]].castling(start, end) == True:
             self.board[end[0]][end[1]] = self.board[start[0]][start[1]]
             self.board[start[0]][start[1]] = emptySpace()
         else:
-            return False
-        
+            return False  
     def pointsWhite(self):
         points = 0
         for i in range(8):
@@ -365,6 +367,7 @@ def main():
     chessBoard1.move([5, 0], [6, 7])
     chessBoard1.move([0, 0], [4,0])
     chessBoard1.move([4,0], [6,7])
+    chessBoard1.move([5,0], [6,1])
     #print the board
     chessBoard1.printBoard()
     # print(chessBoard1.pointsWhite())
