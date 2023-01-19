@@ -15,7 +15,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repository to your local machine.
 
-git clone https://github.com/yourusername/AI-Chess-Game.git
+git clone https://github.com/ssanjan123/AI-Chess--In-progress-/tree/main
 
 2. Open the project in your preferred IDE.
 3. Run the main script to start the game.
@@ -33,7 +33,7 @@ git clone https://github.com/yourusername/AI-Chess-Game.git
 
 ## Authors
 
-- **Your Name** - *Initial work* - [YourUsername](https://github.com/yourusername)
+- **Wahid Sanjan** - *Initial work* - [Wahid Sanjan](https://github.com/ssanjan123)
 
 ## Acknowledgments
 
