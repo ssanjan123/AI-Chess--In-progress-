@@ -1,5 +1,7 @@
 # AI Chess Game
 
+<img src="https://user-images.githubusercontent.com/84153519/213358971-e7073333-f2e2-434a-84a8-7c67e2dec5a0.png" width="500" height="300">
+
 This project is an implementation of an AI chess game using Python. It utilizes the Minimax algorithm and Constraint Satisfaction Problems (CSP) to make intelligent move decisions.
 
 ## Getting Started
