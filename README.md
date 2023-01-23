@@ -1,4 +1,4 @@
-# AI Chess Game
+# AI Chess Game - In progress
 
 <img src="https://user-images.githubusercontent.com/84153519/213358971-e7073333-f2e2-434a-84a8-7c67e2dec5a0.png" width="450" height="400">
 
