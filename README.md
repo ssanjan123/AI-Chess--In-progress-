@@ -22,7 +22,7 @@ git clone https://github.com/ssanjan123/AI-Chess--In-progress-/tree/main
 2. Open the project in your preferred IDE.
 3. Run the main script to start the game.
 
-## Features
+## Features (Current and Future)
 
 - Implements the Minimax algorithm for intelligent move decisions.
 - Uses CSP for move constraints and board evaluation.
